@@ -84,11 +84,11 @@ public class Problema02 {
         total = peaje + recargo;
 
         System.out.printf("Peaje 'Buena Vía'\nPropietario: %s\nTipo: %s\n"
-        + "    Avalúo: $%.2f\n"
-        + "    Valor base del peaje: $%.2f\n"
-        + "    Recargo: $%.2f\n\n"
-        + "    Total a cancelar: $%.2f\n", propietario, opcion, avaluo, peaje, 
-        recargo, total);
+                + "    Avalúo: $%.2f\n"
+                + "    Valor base del peaje: $%.2f\n"
+                + "    Recargo: $%.2f\n\n"
+                + "    Total a cancelar: $%.2f\n", propietario, opcion, avaluo, peaje,
+                recargo, total);
     }
- 
+
 }

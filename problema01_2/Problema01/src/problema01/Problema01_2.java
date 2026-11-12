@@ -33,7 +33,7 @@ public class Problema01_2 {
                 + "para continuar");
         numero2 = entrada.nextInt();
 
-        seleccion = "Ninguna operación";
+        seleccion = "Opción inválida";
         operacion = 0;
         System.out.println("Ingrese la operación\n"
                 + "1 suma\n"
@@ -71,9 +71,9 @@ public class Problema01_2 {
                     operacion = Math.powExact(numero1, numero2);
                     break;
                 default:
-                    System.out.println("Operación inválida");
- 
-            } 
+                    System.out.println("Opción inválida");
+
+            }
         } else {
             System.out.println("No es posible realizar la operación solicitada."
                     + "El primer número debe ser mayor al segundo");
