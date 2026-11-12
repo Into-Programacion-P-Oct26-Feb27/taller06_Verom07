@@ -25,14 +25,14 @@ public class Problema03 {
         int tipo;
         int servicio;
         double sueldo;
-        double porcentaje;
+        int porcentaje;
         double incremento;
         double bonificacion;
         double nuevo;
 
         System.out.println("Ingrese el nombre del empleado");
         nombre = entrada.nextLine();
-        
+
         System.out.println("Ingrese el tipo de empleado\n"
                 + "1\n"
                 + "2\n"
@@ -40,14 +40,58 @@ public class Problema03 {
                 + "4\n"
                 + "5 o cualquier otro tipo\n");
         tipo = entrada.nextInt();
-        
+
         System.out.println("Ingrese los años de servicio");
         servicio = entrada.nextInt();
-        
+
         System.out.println("Ingrese su sueldo actual");
         sueldo = entrada.nextDouble();
-        
-        
-    }
 
+        switch (tipo) {
+            case 1:
+                porcentaje = 5;
+                break;
+            case 2:
+                porcentaje = 7;
+                break;
+            case 3:
+                porcentaje = 9;
+                break;
+            case 4:
+                porcentaje = 12;
+                break;
+            default:
+                porcentaje = 15;
+                break;
+        }
+        if (servicio < 2) {
+            bonificacion = 0;
+        } else {
+            if (servicio >= 2 && servicio < 5) {
+                bonificacion = 30;
+            } else {
+                if (servicio >= 5 && servicio < 10) {
+                    bonificacion = 60;
+                } else {
+                    bonificacion = 100;
+                }
+            }
+        }
+        
+        incremento = (sueldo * porcentaje) / 100;
+        nuevo = sueldo + incremento + bonificacion;
+        
+        System.out.printf("REPORTE DE INCREMENTO SALARIAL\n\n"
+                + "Empleado: %s\n"
+                + "Tipo de empleado: %d\n"
+                + "Años de servicio: %d\n\n"
+                + "Sueldo incial: $%.2f\n"
+                + "Porcentaje de incremento: %d%%\n"
+                + "Incremento salarial: $%.2f\n"
+                + "Bonificación por antigüedad: $%.2f\n\n"
+                + "Nuevo sueldo: $%.2f\n", nombre, 
+                tipo, servicio, sueldo, porcentaje, incremento, 
+                bonificacion, nuevo);
+    }
+ 
 }
