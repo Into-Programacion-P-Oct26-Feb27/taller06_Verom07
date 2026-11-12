@@ -17,7 +17,7 @@ public class Problema01_2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // desarrollo de la aplicación
+        // desarrollo de la aplicación caso B
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         int numero1;
@@ -72,7 +72,7 @@ public class Problema01_2 {
                     break;
                 default:
                     System.out.println("Operación inválida");
-
+ 
             } 
         } else {
             System.out.println("No es posible realizar la operación solicitada."

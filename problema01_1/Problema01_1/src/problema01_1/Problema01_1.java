@@ -4,6 +4,9 @@
  */
 package problema01_1;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author UsuarioPcCenter
@@ -14,7 +17,74 @@ public class Problema01_1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // desarrollo de la aplicación caso A
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+
+        int numero1;
+        int numero2;
+        int opcion;
+        int operacion;
+        String seleccion;
+
+        System.out.println("Ingrese el primer número");
+        numero1 = entrada.nextInt();
+
+        System.out.println("Ingrese el segundo  número, debe ser menor al primero"
+                + "para continuar");
+        numero2 = entrada.nextInt();
+
+        seleccion = "Ninguna operación";
+        operacion = 0;
+        System.out.println("Ingrese la operación\n"
+                + "1 suma\n"
+                + "2 resta\n"
+                + "3 multiplicación\n"
+                + "4 división\n"
+                + "5 Módulo (residuo de la división)\n"
+                + "6 potencia\n");
+        opcion = entrada.nextInt();
+
+        if (numero1 > numero2) {
+            if (opcion == 1) {
+                seleccion = "Suma";
+                operacion = numero1 + numero2;
+            } else {
+                if (opcion == 2) {
+                    seleccion = "Resta";
+                    operacion = numero1 - numero2;
+                } else {
+                    if (opcion == 3) {
+                        seleccion = "Multiplicación";
+                        operacion = numero1 * numero2;
+                    } else {
+                        if (opcion == 4) {
+                            seleccion = "División";
+                            operacion = numero1 / numero2;
+                        } else {
+                            if (opcion == 5) {
+                                seleccion = "Módulo";
+                                operacion = numero1 % numero2;
+                            } else {
+                                if (opcion == 6) {
+                                    seleccion = "potencia";
+                                    operacion = Math.powExact(numero1, numero2);
+                                } else {
+                                    System.out.println("Operación inválida");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            System.out.println("No es posible realizar la operación solicitada."
+                    + "El primer número debe ser mayor al segundo");
+        }
+        System.out.printf("OPERACIONES ARITMÉTICAS\n\n"
+                + "Primer número: %d\nSegundo número: %d\n"
+                + "Operación selecionada: %s\n\nResultado: %d\n", numero1,
+                numero2, seleccion, operacion);
     }
-    
+
 }
