@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author SALASC
  */
-public class Problema01 {
+public class Problema01_2 {
 
     /**
      * @param args the command line arguments
