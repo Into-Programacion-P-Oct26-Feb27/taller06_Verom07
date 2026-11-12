@@ -33,13 +33,13 @@ public class Problema01 {
                 + "para continuar");
         numero2 = entrada.nextInt();
 
-        seleccion = "Ninguna operacion";
+        seleccion = "Ninguna operación";
         operacion = 0;
         System.out.println("Ingrese la operación\n"
                 + "1 suma\n"
                 + "2 resta\n"
                 + "3 multiplicación\n"
-                + "4 división"
+                + "4 división\n"
                 + "5 Módulo (residuo de la división)\n"
                 + "6 potencia\n");
         opcion = entrada.nextInt();
