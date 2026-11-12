@@ -21,20 +21,35 @@ public class Problema02 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         String propietario;
-        String tipo;
+        int tipo;
+        double avaluo;
+        double tarifa;
+        double recargo;
+        double total;
         
         System.out.println("Ingrese el nombre del propietario del vehículo");
         propietario = entrada.nextLine();
         
-        tipo = "Ningun tipo seleccionado";
+        System.out.println("Ingrese el avalúo del vehívulo");
+        avaluo = entrada.nextDouble();
+        
         System.out.println("Ingrese el tipo de vehículo\n"
                 + "1 Vehículo liviano particular\n"
                 + "2 Vehículo grande particular\n"
                 + "3 taxi\n"
                 + "4 bus urbano\n");
-        tipo = entrada.nextLine();
+        tipo = entrada.nextInt();
         
-        
+        switch (tipo){
+            case 1:
+                 
+                tarifa = 2;
+                break;
+            case 2:
+                
+                tarifa = 2.5;
+                break;
+        }
     }
     
 }
